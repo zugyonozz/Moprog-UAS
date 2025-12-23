@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="0dp"
+    app:cardBackgroundColor="#00000000"
+    android:layout_margin="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Gambar Rumah -->
+        <!-- Height dibuat wrap_content atau fixed (misal 200dp) -->
+        <!-- adjustViewBounds=true penting buat Staggered Grid biar tingginya ngikutin gambar asli -->
+        <ImageView
+            android:id="@+id/imgHouse"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:minHeight="150dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@android:drawable/ic_menu_gallery"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Gradient Hitam di bawah gambar biar teks kebaca (Opsional) -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:background="#80000000"
+            app:layout_constraintBottom_toBottomOf="@id/imgHouse"
+            app:layout_constraintStart_toStartOf="@id/imgHouse"
+            app:layout_constraintEnd_toEndOf="@id/imgHouse" />
+
+        <!-- Judul Rumah -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Dreamsville House"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:padding="12dp"
+            app:layout_constraintBottom_toBottomOf="@id/imgHouse"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Jarak (Distance) -->
+        <TextView
+            android:id="@+id/tvDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1.2 km"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp"
+            android:background="#40000000"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="4dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
