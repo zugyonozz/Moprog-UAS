@@ -13,4 +13,19 @@
         android:icon="@android:drawable/ic_menu_save"
         android:title="Saved" />
 
+    <item
+        android:id="@+id/menu_upload"
+        android:icon="@android:drawable/ic_menu_upload"
+        android:title="Upload" />
+
+    <item
+        android:id="@+id/menu_interact"
+        android:icon="@android:drawable/ic_menu_send"
+        android:title="Interact" />
+
+    <item
+        android:id="@+id/menu_profile"
+        android:icon="@android:drawable/ic_menu_preferences"
+        android:title="Profile" />
+
 </menu>

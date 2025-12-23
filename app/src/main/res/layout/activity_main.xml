@@ -2,12 +2,12 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F5F5F5">
 
     <!-- WADAH FRAGMENT -->
-    <!-- Di sinilah HomeFragment akan muncul -->
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment_container"
         android:layout_width="0dp"
@@ -18,12 +18,12 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <!-- NAVIGATION BAR BAWAH -->
-    <!-- Menu-menunya nanti diatur lewat file menu resource, tapi ini tampilannya -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@android:color/white"
+        app:menu="@menu/bottom_nav_menu"
         app:itemIconTint="#212121"
         app:itemTextColor="#212121"
         app:layout_constraintBottom_toBottomOf="parent"

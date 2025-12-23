@@ -7,29 +7,35 @@ import com.example.myapplication.R
 import com.example.myapplication.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // Inflate layout
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Cek savedInstanceState biar fragment gak di-load ulang pas layar diputar (rotate)
+        // Set halaman awal (Home)
         if (savedInstanceState == null) {
-            // Load HomeFragment sebagai tampilan awal
             loadFragment(HomeFragment())
         }
 
+        // --- LOGIKA BOTTOM NAVIGATION ---
+        // Bagian ini yang bikin tombolnya hidup
         binding.bottomNav.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.menu_home -> {
                     loadFragment(HomeFragment())
                     true
                 }
-                R.id.menu_bookmark -> { // Pastikan ID di menu.xml kamu 'menu_bookmark'
+                R.id.menu_bookmark -> {
+                    // Pastikan kamu sudah bikin file BookmarkFragment.kt ya!
                     loadFragment(BookmarkFragment())
+                    true
+                }
+                R.id.menu_upload -> {
+                    loadFragment(UploadFragment())
                     true
                 }
                 else -> false
