@@ -21,8 +21,7 @@ class MainActivity : AppCompatActivity() {
             loadFragment(HomeFragment())
         }
 
-        // --- LOGIKA BOTTOM NAVIGATION ---
-        // Bagian ini yang bikin tombolnya hidup
+        // Navigasi lengkap untuk 5 menu
         binding.bottomNav.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.menu_home -> {
@@ -30,12 +29,21 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
                 R.id.menu_bookmark -> {
-                    // Pastikan kamu sudah bikin file BookmarkFragment.kt ya!
                     loadFragment(BookmarkFragment())
                     true
                 }
                 R.id.menu_upload -> {
                     loadFragment(UploadFragment())
+                    true
+                }
+                R.id.menu_interact -> {
+                    // Penanganan untuk fragment Social
+                    loadFragment(SocialFragment())
+                    true
+                }
+                R.id.menu_profile -> {
+                    // Penanganan untuk fragment Profile
+                    loadFragment(ProfileFragment())
                     true
                 }
                 else -> false

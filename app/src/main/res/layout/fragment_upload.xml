@@ -39,8 +39,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
-                android:src="@android:drawable/ic_menu_camera"
-                android:padding="60dp"
+                android:src="@drawable/ic_upload_24"
+                android:padding="124dp"
                 app:tint="#BDBDBD" />
 
             <!-- Label instruksi -->
@@ -51,6 +51,7 @@
                 android:layout_gravity="bottom|center_horizontal"
                 android:layout_marginBottom="16dp"
                 android:textColor="#9E9E9E"/>
+
         </androidx.cardview.widget.CardView>
 
         <!-- INPUT FIELDS -->
